@@ -2,6 +2,7 @@
 
 sudo apt-get update
 sudo apt-get install lsd
+dconf load -f / < settings.dconf
 
 # Templates
 cp Templates -r ${HOME}
