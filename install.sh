@@ -37,6 +37,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM
 echo "Configure git.."
 git config --global user.name "mickleon"
 git config --global user.email "mickleon64@gmail.com"
+git config --global init.defaultBranch main
+git config --global core.editor nano
 ssh-keygen -t ed25519 -C "mickleon64@gmail.com"
 echo
 echo "Add your SSH key to GitHub:"
