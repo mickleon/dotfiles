@@ -1,0 +1,7 @@
+[
+    {
+        "label": "GCC build & run",
+        "command": "gcc \"$ZED_FILE\" -g -Wall -o \"$ZED_STEM\" && \"./$ZED_STEM\"",
+        "cwd": "$ZED_WORKTREE_ROOT"
+    }
+]

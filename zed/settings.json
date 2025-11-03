@@ -1,0 +1,101 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+
+{
+    "buffer_font_family": "JetBrainsMono Nerd Font",
+    "buffer_font_weight": 300,
+    "buffer_font_size": 16,
+
+    "ui_font_size": 17,
+    "icon_theme": "Material Icon Theme",
+    "theme": {
+        // "mode": "light",
+        "light": "Github Plus Light",
+        "dark": "My Github Dark Dimmed"
+    },
+
+    "cursor_shape": "block",
+    "tab_size": 4,
+    "remove_trailing_whitespace_on_save": false,
+    "soft_wrap": "editor_width",
+    "preferred_line_length": 79,
+    "auto_indent_on_paste": true,
+
+    "disable_ai": true,
+
+    "wrap_guides": [79],
+    "minimap": {
+        "show": "always",
+        "thumb": "always",
+        "thumb_border": "none",
+        "current_line_highlight": "all"
+    },
+    "tabs": {
+        "git_status": true
+    },
+
+    "file_types": {
+        "Makefile": ["Makefile", "makefile", "GNUmakefile"],
+        "YAML": [".clang-format"],
+        "Django": ["**/templates/**/*.html"]
+    },
+    "languages": {
+        "HTML": {
+            "tab_size": 2,
+            "format_on_save": "on"
+        },
+        "Django": {
+            "tab_size": 2
+        },
+        "C": {
+            "format_on_save": "on",
+            "formatter": {
+                "external": {
+                    "command": "clang-format",
+                    "arguments": []
+                }
+            }
+        },
+        "C++": {
+            "format_on_save": "on",
+            "formatter": {
+                "external": {
+                    "command": "clang-format",
+                    "arguments": []
+                }
+            }
+        },
+        "Make": {
+            "hard_tabs": true
+        },
+        "BibTeX": {
+            "tab_size": 2
+        },
+        "Typst": {
+            "tab_size": 2,
+            "formatter": {
+                "external": {
+                    "command": "typstyle",
+                    "arguments": []
+                }
+            },
+            "format_on_save": "off"
+        },
+        "Plain Text": {}
+    },
+
+    "lsp": {
+        "clangd": {
+            "binary": {
+                "path": "clangd",
+                "arguments": ["--background-index", "--clang-tidy"]
+            }
+        }
+    }
+}
