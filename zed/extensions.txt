@@ -1,0 +1,17 @@
+assembly
+github-theme
+material-icon-theme
+typst
+csharp
+html
+neocmake
+django
+html-snippets
+python-requirements
+git-firefly
+latex
+toml
+zedokai
+github-plus-theme
+make
+ty
