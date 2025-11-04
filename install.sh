@@ -14,7 +14,7 @@ cp bin/* ${HOME}/.local/bin
 cp config/* -r ${HOME}/.config
 cd /tmp
 wget http://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
-unzip JetBrainsMono.zip -d ${HOME}/.local/share/fonts/JetBrains Mono NF
+unzip JetBrainsMono.zip -d "${HOME}/.local/share/fonts/JetBrains Mono NF"
 cd -
 
 # bash
