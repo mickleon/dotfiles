@@ -11,10 +11,7 @@ cp Templates -r ${HOME}
 cp bin/* ${HOME}/.local/bin
 
 #.config
-cp ghostty -r ${HOME}/.config
-cp neofetch -r ${HOME}/.config
-# zed
-cp zed -r ${HOME}/.config
+cp config/* -r ${HOME}/.config
 cd /tmp
 wget http://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
 unzip JetBrainsMono.zip -d ${HOME}/.local/share/fonts/JetBrains Mono NF
