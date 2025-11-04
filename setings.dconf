@@ -5,6 +5,7 @@ font-scale=1.3000000000000003
 last-window-maximised=false
 theme='night'
 visual-bell=false
+use-system-font=false
 
 [org/gnome/TextEditor]
 highlight-current-line=true
@@ -146,4 +147,3 @@ workspace-popup=true
 workspace-switcher-should-show=false
 workspaces-in-app-grid=true
 world-clock=true
-
