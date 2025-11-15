@@ -25,7 +25,7 @@
 # ==========================
 # # The config file consists of simple key-value pairs,
 # # separated by equals signs.
-font-family = JetBrains Mono
+
 font-size = 13
 theme = Adwaita Dark
 shell-integration = zsh
@@ -33,6 +33,7 @@ shell-integration = zsh
 keybind = ctrl+q=close_surface
 keybind = ctrl+bracket_left=goto_split:previous
 keybind = ctrl+bracket_right=goto_split:next
+keybind = ctrl+r=reset
 
 # window-padding-x = 2
 #
