@@ -1,0 +1,9 @@
+CompileFlags:
+  Add: [
+      -I/usr/include/c++/14,
+      -I/usr/include/c++/14/x86_64-alt-linux,
+      -I/usr/include/c++/14/backward,
+      -I/usr/lib64/gcc/x86_64-alt-linux/14/include,
+      -I/usr/local/include,
+      -I/usr/include
+  ]
