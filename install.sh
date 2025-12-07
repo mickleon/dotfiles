@@ -10,12 +10,15 @@ cp Templates -r ${HOME}
 # bin
 cp bin/* ${HOME}/.local/bin
 
-#.config
+# .config
 cp config/* -r ${HOME}/.config
 cd /tmp
 wget http://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
 unzip JetBrainsMono.zip -d "${HOME}/.local/share/fonts/JetBrains Mono NF"
 cd -
+
+# clang-format
+cp .clang-format ${HOME}
 
 # bash
 wget https://github.com/git/git/raw/refs/heads/master/contrib/completion/git-prompt.sh
