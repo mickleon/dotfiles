@@ -1,3 +1,37 @@
+[com/github/Ory0n/Resource_Monitor]
+cpucolors=@as []
+cpufrequencystatus=false
+cpuloadaveragestatus=false
+cpustatus=true
+cpuwidth=0
+customleftclickstatus='kitty btop'
+decimalsstatus=true
+diskdeviceslist=['udevfs /dev false false udevfs', '/dev/nvme0n1p8 / false true /dev/nvme0n1p8', 'efivarfs /sys/firmware/efi/efivars false false efivarfs', 'revokefs-fuse /var/tmp/flatpak-cache-XSYQI3/org.freedesktop.Platform-XI3SI3 false false revokefs-fuse', 'revokefs-fuse /var/tmp/flatpak-cache-XSYQI3/org.kde.Platform-88J9H3 false false revokefs-fuse', 'revokefs-fuse /var/tmp/flatpak-cache-XSYQI3/org.libreoffice.LibreOffice-384QI3 false false revokefs-fuse', 'revokefs-fuse /var/tmp/flatpak-cache-XSYQI3/org.videolan.VLC-U08KI3 false false revokefs-fuse']
+diskshowdevicename=false
+diskspacemonitor='used'
+diskspaceunit='perc'
+diskstatsmode='single'
+diskstatsstatus=false
+diskstatsunitmeasure='auto'
+diskstatswidth=1
+extensionposition='right'
+iconsposition='left'
+iconsstatus=true
+itemsposition=['cpu', 'ram', 'swap', 'stats', 'space', 'gpu', 'wlan', 'eth']
+leftclickstatus='kitty btop'
+netautohidestatus=false
+netethstatus=false
+netwlanstatus=false
+ramalert=false
+ramalertthreshold=99
+rammonitor='used'
+ramstatus=true
+ramunit='perc'
+ramunitmeasure='auto'
+rightclickstatus=true
+swapstatus=false
+thermalcputemperaturedeviceslist=['coretemp: Core 8-false-/sys/class/hwmon/hwmon4/temp10_input', 'coretemp: Core 12-false-/sys/class/hwmon/hwmon4/temp14_input', 'coretemp: Package id 0-false-/sys/class/hwmon/hwmon4/temp1_input', 'coretemp: Core 20-false-/sys/class/hwmon/hwmon4/temp22_input', 'coretemp: Core 21-false-/sys/class/hwmon/hwmon4/temp23_input', 'coretemp: Core 22-false-/sys/class/hwmon/hwmon4/temp24_input', 'coretemp: Core 23-false-/sys/class/hwmon/hwmon4/temp25_input', 'coretemp: Core 0-false-/sys/class/hwmon/hwmon4/temp2_input', 'coretemp: Core 4-false-/sys/class/hwmon/hwmon4/temp6_input']
+
 [org/gnome/Console]
 audible-bell=false
 custom-font='JetBrainsMono Nerd Font 10'
@@ -35,6 +69,11 @@ use-tree-view=true
 binding='<Control><Alt>t'
 command='kitty'
 name='kitty'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Shift><Control>Escape'
+command='kitty btop'
+name='btop'
 
 [org/gnome/shell/app-switcher]
 current-workspace-only=true
