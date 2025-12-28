@@ -36,13 +36,8 @@ binding='<Control><Alt>t'
 command='kitty'
 name='kitty'
 
-[org/gnome/shell/extensions/appindicator]
-icon-brightness=0.0
-icon-contrast=0.0
-icon-opacity=240
-icon-saturation=0.0
-icon-size=0
-tray-pos='right'
+[org/gnome/shell/app-switcher]
+current-workspace-only=true
 
 [org/gnome/shell/extensions/clipboard-indicator]
 clear-on-boot=false
@@ -73,7 +68,10 @@ appicon-padding=4
 dot-position='BOTTOM'
 extension-version=72
 global-border-radius=3
-group-apps=true
+group-apps=false
+group-apps-label-max-width=0
+group-apps-underline-unfocused=true
+group-apps-use-launchers=false
 hotkeys-overlay-combo='TEMPORARILY'
 intellihide=true
 intellihide-hide-from-monitor-windows=false
@@ -82,6 +80,7 @@ intellihide-revealed-hover=true
 intellihide-revealed-hover-limit-size=true
 intellihide-use-pointer-limit-size=true
 intellihide-use-pressure=false
+isolate-workspaces=true
 panel-anchors='{"CMN-0x00000000":"MIDDLE"}'
 panel-element-positions='{"CMN-0x00000000":[{"element":"showAppsButton","visible":true,"position":"centerMonitor"},{"element":"activitiesButton","visible":true,"position":"centerMonitor"},{"element":"leftBox","visible":true,"position":"centerMonitor"},{"element":"taskbar","visible":true,"position":"centerMonitor"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":false,"position":"stackedBR"},{"element":"dateMenu","visible":false,"position":"stackedBR"},{"element":"systemMenu","visible":false,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}'
 panel-lengths='{"CMN-0x00000000":-1}'
@@ -93,9 +92,11 @@ panel-top-bottom-margins=0
 panel-top-bottom-padding=0
 prefs-opened=false
 primary-monitor='CMN-0x00000000'
+progress-show-count=true
 show-apps-icon-file=''
 show-apps-icon-side-padding=0
 show-apps-override-escape=true
+show-favorites-all-monitors=true
 stockgs-keep-top-panel=true
 taskbar-locked=false
 trans-dynamic-anim-target=0.14999999999999999
@@ -115,6 +116,7 @@ animation=1
 background-menu=true
 clock-menu=true
 clock-menu-position-offset=0
+controls-manager-spacing-size=0
 dash=false
 dash-app-running=true
 dash-icon-size=0
@@ -126,8 +128,10 @@ keyboard-layout=true
 looking-glass-width=0
 notification-banner-position=1
 osd=true
+overlay-key=true
 panel=true
 panel-in-overview=true
+panel-notification-icon=true
 panel-size=0
 power-icon=true
 quick-settings=true
@@ -151,3 +155,10 @@ workspace-popup=true
 workspace-switcher-should-show=false
 workspaces-in-app-grid=true
 world-clock=true
+
+[org/gnome/shell/extensions/system-monitor]
+show-cpu=true
+show-memory=true
+show-swap=false
+show-upload=true
+
