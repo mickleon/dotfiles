@@ -4,12 +4,6 @@ sudo apt-get update
 sudo apt-get install lsd
 dconf load -f / < settings.dconf
 
-# Templates
-cp Templates -r ${HOME}
-
-# bin
-cp bin/* ${HOME}/.local/bin
-
 # .config
 cp config/* -r ${HOME}/.config
 cd /tmp
@@ -26,7 +20,7 @@ mv git-prompt.sh ${HOME}/.git-prompt.sh
 cp bash/.bashrc ${HOME}
 
 # zsh
-echo "Installing zsh..."
+echo "==== Installing zsh ===="
 sudo apt-get install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp zsh/my_robbyrussell.zsh-theme "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes"
@@ -35,12 +29,12 @@ git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-$HOME/
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
 
 # git
-echo "Configure git.."
+echo "==== Configure git ===="
 git config --global user.name "mickleon"
 git config --global user.email "mickleon64@gmail.com"
 git config --global init.defaultBranch main
-git config --global core.editor nano
+git config --global core.editor nvim
 ssh-keygen -t ed25519 -C "mickleon64@gmail.com"
 echo
-echo "Add your SSH key to GitHub:"
+echo "==== Add your SSH key to GitHub: ===="
 cat ${HOME}/.ssh/id_ed25519.pub
