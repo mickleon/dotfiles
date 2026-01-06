@@ -32,6 +32,15 @@ rightclickstatus=true
 swapstatus=false
 thermalcputemperaturedeviceslist=['coretemp: Core 8-false-/sys/class/hwmon/hwmon4/temp10_input', 'coretemp: Core 12-false-/sys/class/hwmon/hwmon4/temp14_input', 'coretemp: Package id 0-false-/sys/class/hwmon/hwmon4/temp1_input', 'coretemp: Core 20-false-/sys/class/hwmon/hwmon4/temp22_input', 'coretemp: Core 21-false-/sys/class/hwmon/hwmon4/temp23_input', 'coretemp: Core 22-false-/sys/class/hwmon/hwmon4/temp24_input', 'coretemp: Core 23-false-/sys/class/hwmon/hwmon4/temp25_input', 'coretemp: Core 0-false-/sys/class/hwmon/hwmon4/temp2_input', 'coretemp: Core 4-false-/sys/class/hwmon/hwmon4/temp6_input']
 
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+enable-animations=true
+enable-hot-corners=false
+font-antialiasing='grayscale'
+font-hinting='slight'
+gtk-theme='Adwaita-dark'
+show-battery-percentage=true
+
 [org/gnome/Console]
 audible-bell=false
 custom-font='JetBrainsMono Nerd Font 10'
