@@ -199,6 +199,12 @@
         )),
         "elapsed": Pane(Property(
             content: [
+                (kind: Property(Status(StateV2(
+                    playing_label: "  ",
+                    paused_label: "  ",
+                    stopped_label: "  ",
+                    stopped_style: (modifiers: "Dim"),
+                ))), style: (modifiers: "Bold")),
                 (kind: Property(Status(Elapsed))), 
                 (kind: Text(" / ")), 
                 (kind: Property(Status(Duration))), 
@@ -219,36 +225,33 @@
                 (
                     size: "100%",
                     pane: Pane(Property(content: [
-                        (kind: Property(Status(StateV2(
-                            playing_label: "  ",
-                            paused_label: "  ",
-                            stopped_label: "  ",
-                            stopped_style: (modifiers: "Dim"),
-                        ))), style: (modifiers: "Bold")),
                         (kind: Property(Status(RepeatV2(
-                            on_label: " 󰑖 (z) ",
-                            off_label: " 󰑗 (z) ",
+                            on_label: "󰑖 (z)",
+                            off_label: "󰑗 (z)",
                             on_style: (fg: "yellow", modifiers: "Bold"),
                             off_style: (fg: "blue", modifiers: "Dim"),
                         )))),
+                        (kind: Text(" ")), 
                         (kind: Property(Status(RandomV2(
-                            on_label: "  (x) ",
-                            off_label: "  (x) ",
+                            on_label: " (x)",
+                            off_label: " (x)",
                             on_style: (fg: "yellow", modifiers: "Bold"),
                             off_style: (fg: "blue", modifiers: "Dim"),
                         )))),
+                        (kind: Text(" ")), 
                         (kind: Property(Status(ConsumeV2(
-                            on_label: " 󰩺 (c) ",
-                            off_label: " 󰩺 (c)  ",
-                            oneshot_label: " 󰩺 (c) ",
+                            on_label: "󰩺 (c)",
+                            off_label: "󰩺 (c)",
+                            oneshot_label: "󰩺 (c)",
                             on_style: (fg: "yellow", modifiers: "Bold"),
                             off_style: (fg: "blue", modifiers: "Dim"),
                             oneshot_style: (fg: "red", modifiers: "Dim"),
                         )))),
+                        (kind: Text(" ")), 
                         (kind: Property(Status(SingleV2(
-                            on_label: " 󰑘 (v) ",
-                            off_label: " 󰑘 (v) ",
-                            oneshot_label: " 󰑘 (v) ",
+                            on_label: "󰑘 (v)",
+                            off_label: "󰑘 (v)",
+                            oneshot_label: "󰑘 (v)",
                             on_style: (fg: "yellow", modifiers: "Bold"),
                             off_style: (fg: "blue", modifiers: "Dim"),
                             oneshot_style: (fg: "red", modifiers: "Bold"),
