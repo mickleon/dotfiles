@@ -187,7 +187,7 @@ quick-settings-dark-mode=false
 ripple-box=true
 screen-recording-indicator=true
 search=true
-show-apps-button=true
+show-apps-button=tr
 startup-status=1
 support-notifier-type=0
 switcher-popup-delay=false
@@ -218,4 +218,27 @@ second-field=''
 symbolic-source-icon=true
 use-whitelisted-sources-only=false
 volume-control-scheme='global'
+
+[org/gnome/shell/extensions/kiwi]
+add-username-to-quick-menu=false
+battery-percentage=false
+button-size='small'
+button-type='titlebuttons'
+enable-app-window-buttons=true
+enable-firefox-styling=false
+enable-launchpad-app=false
+hide-activities-button=false
+hide-keyboard-indicator=false
+hide-minimized-windows=false
+keyboard-indicator=false
+lock-icon=false
+move-calendar-right=false
+move-window-to-new-workspace=false
+panel-hover-fullscreen=false
+panel-opaque-on-window=true
+panel-transparency=true
+panel-transparency-level=30
+show-window-controls=false
+show-window-title=false
+transparent-move=false
 
