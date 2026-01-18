@@ -114,8 +114,10 @@ source $ZSH/oh-my-zsh.sh
 
 alias zed=zed-editor
 alias ls=lsd
+alias proxy-on='export all_proxy=socks5://127.0.0.1:1080'
+alias proxy-off='unset all_proxy http_proxy https_proxy'
 
 export XDG_DATA_DIRS=/var/lib/flatpak/exports/share:/home/mleontyev/.local/share/flatpak/exports/share:$XDG_DATA_DIRS
-export PATH=/usr/local/texlive/2025/bin/x86_64-linux:/usr/share/dotnet:$PATH:$HOME/.local/bin
+export PATH=/usr/local/texlive/2025/bin/x86_64-linux:/usr/share/dotnet:$HOME/go/bin:$PATH:$HOME/.local/bin
 export MANPATH=/usr/local/texlive/2025/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2025/texmf-dist/doc/info:$INFOPATH
