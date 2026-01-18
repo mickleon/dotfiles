@@ -204,3 +204,18 @@ workspace-switcher-should-show=false
 workspaces-in-app-grid=true
 world-clock=true
 
+[org/gnome/shell/extensions/mpris-label]
+album-size=60
+auto-switch-to-most-recent=true
+divider-string=' — '
+extension-index=0
+icon-padding=5
+left-padding=0
+max-string-length=30
+mpris-sources-whitelist='Медиапроигрыватель VLC,MPD'
+right-padding=0
+second-field=''
+symbolic-source-icon=true
+use-whitelisted-sources-only=false
+volume-control-scheme='global'
+
