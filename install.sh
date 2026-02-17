@@ -8,6 +8,7 @@ dconf load -f / < settings.dconf
 cp config/* -r ${HOME}/.config
 cd /tmp
 wget http://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+mkdir "${HOME}/.local/share/fonts/"
 unzip JetBrainsMono.zip -d "${HOME}/.local/share/fonts/JetBrains Mono NF"
 cd -
 
