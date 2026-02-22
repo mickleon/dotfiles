@@ -8,16 +8,21 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 
 {
+    "proxy": "socks5://localhost:1080",
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false,
+    },
     "buffer_font_family": "JetBrainsMono Nerd Font",
     "buffer_font_weight": 300,
     "buffer_font_size": 16,
 
     "ui_font_size": 17,
-    "icon_theme": "Material Icon Theme",
+    "icon_theme": "Catppuccin Macchiato",
     "theme": {
         // "mode": "light",
         "light": "Github Plus Light",
-        "dark": "My Github Dark Dimmed"
+        "dark": "My Github Dark Dimmed",
     },
 
     "cursor_shape": "block",
@@ -34,68 +39,68 @@
         "show": "always",
         "thumb": "always",
         "thumb_border": "none",
-        "current_line_highlight": "all"
+        "current_line_highlight": "all",
     },
     "tabs": {
-        "git_status": true
+        "git_status": true,
     },
 
     "file_types": {
         "Makefile": ["Makefile", "makefile", "GNUmakefile"],
         "YAML": [".clang-format"],
-        "Django": ["**/templates/**/*.html"]
+        "Django": ["**/templates/**/*.html"],
     },
     "languages": {
         "HTML": {
             "tab_size": 2,
-            "format_on_save": "on"
+            "format_on_save": "on",
         },
         "Django": {
-            "tab_size": 2
+            "tab_size": 2,
         },
         "C": {
             "format_on_save": "on",
             "formatter": {
                 "external": {
                     "command": "clang-format",
-                    "arguments": []
-                }
-            }
+                    "arguments": [],
+                },
+            },
         },
         "C++": {
             "format_on_save": "on",
             "formatter": {
                 "external": {
                     "command": "clang-format",
-                    "arguments": []
-                }
-            }
+                    "arguments": [],
+                },
+            },
         },
         "Make": {
-            "hard_tabs": true
+            "hard_tabs": true,
         },
         "BibTeX": {
-            "tab_size": 2
+            "tab_size": 2,
         },
         "Typst": {
             "tab_size": 2,
             "formatter": {
                 "external": {
                     "command": "typstyle",
-                    "arguments": []
-                }
+                    "arguments": [],
+                },
             },
-            "format_on_save": "off"
+            "format_on_save": "off",
         },
-        "Plain Text": {}
+        "Plain Text": {},
     },
 
     "lsp": {
         "clangd": {
             "binary": {
                 "path": "clangd",
-                "arguments": ["--background-index", "--clang-tidy"]
-            }
-        }
-    }
+                "arguments": ["--background-index", "--clang-tidy"],
+            },
+        },
+    },
 }

@@ -1,6 +1,5 @@
 assembly
 github-theme
-material-icon-theme
 typst
 csharp
 html
