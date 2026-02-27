@@ -129,7 +129,7 @@
                                             direction: Horizontal,
                                             panes: [
                                                 (
-                                                    size:"13",
+                                                    size:"14",
                                                     pane: Component("elapsed") 
                                                 ),
                                                 (
