@@ -1,15 +1,18 @@
 [com/github/Ory0n/Resource_Monitor]
 cpucolors=@as []
 cpufrequencystatus=false
+cpuloadaveragecolors=['90.0 1 1 1', '100.0 0.8784313725490196 0.10588235294117647 0.1411764705882353']
 cpuloadaveragestatus=false
 cpustatus=true
 cpuwidth=0
 customleftclickstatus='kitty btop'
 decimalsstatus=true
-diskdeviceslist=['udevfs /dev false false udevfs', '/dev/nvme0n1p8 / false true /dev/nvme0n1p8', 'efivarfs /sys/firmware/efi/efivars false false efivarfs', 'revokefs-fuse /var/tmp/flatpak-cache-XSYQI3/org.freedesktop.Platform-XI3SI3 false false revokefs-fuse', 'revokefs-fuse /var/tmp/flatpak-cache-XSYQI3/org.kde.Platform-88J9H3 false false revokefs-fuse', 'revokefs-fuse /var/tmp/flatpak-cache-XSYQI3/org.libreoffice.LibreOffice-384QI3 false false revokefs-fuse', 'revokefs-fuse /var/tmp/flatpak-cache-XSYQI3/org.videolan.VLC-U08KI3 false false revokefs-fuse']
+diskdeviceslist=['udevfs /dev false false udevfs', '/dev/nvme0n1p8 / false true /dev/nvme0n1p8', 'efivarfs /sys/firmware/efi/efivars false false efivarfs', 'squashfuse /tmp/.private/mleontyev/.mount_zenremp260787444639282899 false false squashfuse']
 diskshowdevicename=false
+diskspacecolors=['90.0 1 1 1', '100.0 0.8784313725490196 0.10588235294117647 0.1411764705882353']
 diskspacemonitor='used'
 diskspaceunit='perc'
+diskspacewidth=18
 diskstatsmode='single'
 diskstatsstatus=false
 diskstatsunitmeasure='auto'
@@ -21,6 +24,7 @@ itemsposition=['cpu', 'ram', 'swap', 'stats', 'space', 'gpu', 'wlan', 'eth']
 leftclickstatus='kitty btop'
 netautohidestatus=false
 netethstatus=false
+netwlancolors=@as []
 netwlanstatus=false
 ramalert=false
 ramalertthreshold=99
@@ -28,24 +32,18 @@ rammonitor='used'
 ramstatus=true
 ramunit='perc'
 ramunitmeasure='auto'
+ramwidth=31
 rightclickstatus=true
 swapstatus=false
 thermalcputemperaturedeviceslist=['coretemp: Core 8-false-/sys/class/hwmon/hwmon4/temp10_input', 'coretemp: Core 12-false-/sys/class/hwmon/hwmon4/temp14_input', 'coretemp: Package id 0-false-/sys/class/hwmon/hwmon4/temp1_input', 'coretemp: Core 20-false-/sys/class/hwmon/hwmon4/temp22_input', 'coretemp: Core 21-false-/sys/class/hwmon/hwmon4/temp23_input', 'coretemp: Core 22-false-/sys/class/hwmon/hwmon4/temp24_input', 'coretemp: Core 23-false-/sys/class/hwmon/hwmon4/temp25_input', 'coretemp: Core 0-false-/sys/class/hwmon/hwmon4/temp2_input', 'coretemp: Core 4-false-/sys/class/hwmon/hwmon4/temp6_input']
-
-[org/gnome/desktop/interface]
-color-scheme='prefer-dark'
-enable-animations=true
-enable-hot-corners=false
-font-antialiasing='grayscale'
-font-hinting='slight'
-gtk-theme='Adwaita-dark'
-show-battery-percentage=true
+thermalcputemperaturestatus=false
 
 [org/gnome/Console]
 audible-bell=false
 custom-font='JetBrainsMono Nerd Font 10'
 font-scale=1.2999999999999998
-last-window-maximised=true
+last-window-maximised=false
+last-window-size=(1010, 648)
 theme='night'
 use-system-font=false
 visual-bell=false
@@ -58,21 +56,39 @@ show-right-margin=false
 style-scheme='Adwaita-dark'
 use-system-font=true
 
-[org/gnome/desktop/calendar]
-show-weekdate=true
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+enable-animations=true
+enable-hot-corners=false
+font-antialiasing='grayscale'
+font-hinting='slight'
+font-rendering='automatic'
+gtk-enable-primary-paste=false
+gtk-theme='Adwaita-dark'
+icon-theme='Adwaita'
+show-battery-percentage=true
 
 [org/gnome/desktop/peripherals/touchpad]
 click-method='areas'
 disable-while-typing=false
 two-finger-scrolling-enabled=true
 
+[org/gnome/desktop/wm/keybindings]
+toggle-fullscreen=['<Alt>F11']
+
 [org/gnome/desktop/wm/preferences]
+auto-raise=false
 button-layout=':minimize,maximize,close,'
 focus-mode='click'
+focus-new-windows='smart'
 
 [org/gnome/nautilus/list-view]
 default-zoom-level='medium'
 use-tree-view=true
+
+[org/gnome/settings-daemon/plugins/media-keys]
+control-center=['<Control><Alt>s']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Control><Alt>t'
@@ -80,23 +96,76 @@ command='kitty'
 name='kitty'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
-binding='<Shift><Control>Escape'
-command='kitty btop'
-name='btop'
+binding='<Super>r'
+command='wofi --show drun'
+name='wofi'
 
 [org/gnome/shell/app-switcher]
 current-workspace-only=true
 
-[org/gnome/shell/extensions/clipboard-indicator]
-clear-on-boot=false
+[org/gnome/shell/extensions/appindicator]
+icon-brightness=0.0
+icon-contrast=0.0
+icon-opacity=240
+icon-saturation=0.0
+icon-size=0
+
+[org/gnome/shell/extensions/blur-my-shell]
+settings-version=2
+
+[org/gnome/shell/extensions/blur-my-shell/appfolder]
+brightness=0.59999999999999998
+sigma=30
+
+[org/gnome/shell/extensions/blur-my-shell/applications]
+blur=true
+blur-on-overview=false
+brightness=1.0
+dynamic-opacity=false
+enable-all=false
+opacity=232
+sigma=3
+whitelist=@as []
+
+[org/gnome/shell/extensions/blur-my-shell/coverflow-alt-tab]
+pipeline='pipeline_default'
+
+[org/gnome/shell/extensions/blur-my-shell/dash-to-panel]
+blur-original-panel=true
+
+[org/gnome/shell/extensions/blur-my-shell/hidetopbar]
+compatibility=false
+
+[org/gnome/shell/extensions/blur-my-shell/lockscreen]
+pipeline='pipeline_default'
+
+[org/gnome/shell/extensions/blur-my-shell/overview]
+blur=true
+pipeline='pipeline_default'
+
+[org/gnome/shell/extensions/blur-my-shell/panel]
+blur=false
+brightness=0.59999999999999998
+override-background=true
+pipeline='pipeline_default'
+sigma=30
+static-blur=false
+unblur-in-overview=true
+
+[org/gnome/shell/extensions/blur-my-shell/screenshot]
+pipeline='pipeline_default'
+
+[org/gnome/shell/extensions/blur-my-shell/window-list]
+brightness=0.59999999999999998
+sigma=30
+
+[org/gnome/shell/extensions/clipboard-history]
+cache-size=100
 disable-down-arrow=true
 display-mode=3
-move-item-first=true
-next-entry=@as []
-paste-on-select=true
-prev-entry=@as []
-private-mode-binding=@as []
-toggle-menu=['<Control>F9']
+private-mode=false
+topbar-preview-size=1
+window-width-percentage=23
 
 [org/gnome/shell/extensions/color-picker]
 auto-copy=true
@@ -111,64 +180,42 @@ preview-style=uint32 0
 [org/gnome/shell/extensions/dash-to-panel]
 animate-appicon-hover=true
 animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
-animate-appicon-hover-animation-travel={'SIMPLE': 0.20000000000000001, 'RIPPLE': 0.40000000000000002, 'PLANK': 0.0}
-appicon-padding=4
+animate-appicon-hover-animation-travel={'SIMPLE': 0.22, 'RIPPLE': 0.40000000000000002, 'PLANK': 0.0}
+appicon-margin=5
+appicon-padding=3
+appicon-style='NORMAL'
 dot-position='BOTTOM'
+dot-style-focused='METRO'
+dot-style-unfocused='METRO'
 extension-version=72
 global-border-radius=3
 group-apps=false
+group-apps-label-font-size=6
 group-apps-label-max-width=0
-group-apps-underline-unfocused=true
-group-apps-use-launchers=false
+group-apps-use-fixed-width=true
 hotkeys-overlay-combo='TEMPORARILY'
 intellihide=true
-intellihide-hide-from-monitor-windows=false
-intellihide-hide-from-windows=false
-intellihide-revealed-hover=true
-intellihide-revealed-hover-limit-size=true
-intellihide-use-pointer-limit-size=true
-intellihide-use-pressure=false
 isolate-workspaces=true
+middle-click-action='LAUNCH'
 panel-anchors='{"CMN-0x00000000":"MIDDLE"}'
-panel-element-positions='{"CMN-0x00000000":[{"element":"showAppsButton","visible":true,"position":"centerMonitor"},{"element":"activitiesButton","visible":true,"position":"centerMonitor"},{"element":"leftBox","visible":true,"position":"centerMonitor"},{"element":"taskbar","visible":true,"position":"centerMonitor"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":false,"position":"stackedBR"},{"element":"dateMenu","visible":false,"position":"stackedBR"},{"element":"systemMenu","visible":false,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}'
+panel-element-positions='{"CMN-0x00000000":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":true,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":false,"position":"stackedBR"},{"element":"rightBox","visible":false,"position":"stackedBR"},{"element":"dateMenu","visible":false,"position":"stackedBR"},{"element":"systemMenu","visible":false,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}'
 panel-lengths='{"CMN-0x00000000":-1}'
-panel-positions='{"CMN-0x00000000":"BOTTOM"}'
-panel-side-margins=0
-panel-side-padding=6
+panel-positions='{}'
 panel-sizes='{"CMN-0x00000000":43}'
-panel-top-bottom-margins=0
 panel-top-bottom-padding=0
 prefs-opened=false
-primary-monitor='CMN-0x00000000'
-progress-show-count=true
-show-apps-icon-file=''
-show-apps-icon-side-padding=0
-show-apps-override-escape=true
-show-favorites-all-monitors=true
+preview-use-custom-opacity=false
+shift-click-action='MINIMIZE'
+shift-middle-click-action='LAUNCH'
 stockgs-keep-top-panel=true
-taskbar-locked=false
-trans-dynamic-anim-target=0.14999999999999999
-trans-dynamic-behavior='MAXIMIZED_WINDOWS'
+trans-border-use-custom-color=false
 trans-panel-opacity=0.25
+trans-use-border=false
+trans-use-custom-bg=false
 trans-use-custom-opacity=true
 trans-use-dynamic-opacity=false
 window-preview-size=160
 window-preview-title-position='TOP'
-
-[org/gnome/shell/extensions/mpris-label]
-album-size=60
-auto-switch-to-most-recent=true
-divider-string=' — '
-extension-index=0
-icon-padding=5
-left-padding=0
-max-string-length=30
-mpris-sources-whitelist='Медиапроигрыватель VLC,MPD'
-right-padding=0
-second-field=''
-symbolic-source-icon=true
-use-whitelisted-sources-only=false
-volume-control-scheme='global'
 
 [org/gnome/shell/extensions/kiwi]
 add-username-to-quick-menu=false
@@ -185,6 +232,7 @@ keyboard-indicator=false
 lock-icon=false
 move-calendar-right=false
 move-window-to-new-workspace=false
+overview-wallpaper-background=false
 panel-hover-fullscreen=false
 panel-opaque-on-window=true
 panel-transparency=true
@@ -193,3 +241,18 @@ show-window-controls=false
 show-window-title=false
 transparent-move=false
 
+[org/gnome/shell/extensions/mpris-label]
+album-size=60
+auto-switch-to-most-recent=true
+divider-string=' — '
+extension-index=0
+icon-padding=5
+left-padding=0
+max-string-length=30
+mpris-sources-blacklist=''
+mpris-sources-whitelist='Медиапроигрыватель VLC,MPD'
+right-padding=0
+second-field=''
+symbolic-source-icon=true
+use-whitelisted-sources-only=false
+volume-control-scheme='global'
