@@ -1,0 +1,8 @@
+[diagnostics]
+enabled = true
+broken_links = true
+duplicate_headings = true
+heading_levels = true
+trailing_whitespace = true
+line_length = false
+undefined_references = true
