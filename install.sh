@@ -2,7 +2,7 @@
 
 sudo apt-get update
 sudo apt-get install lsd
-dconf load -f / < settings.dconf
+dconf load -f / <settings.dconf
 
 # .config
 cp config/* -r ${HOME}/.config
@@ -39,3 +39,5 @@ ssh-keygen -t ed25519 -C "mickleon64@gmail.com"
 echo
 echo "==== Add your SSH key to GitHub: ===="
 cat ${HOME}/.ssh/id_ed25519.pub
+
+# for nvim >= 0.12 install lua5.1-lpeg from luarocks
