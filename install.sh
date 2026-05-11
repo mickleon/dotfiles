@@ -12,6 +12,9 @@ mkdir "${HOME}/.local/share/fonts/"
 unzip JetBrainsMono.zip -d "${HOME}/.local/share/fonts/JetBrains Mono NF"
 cd -
 
+# bin
+cp bin/* ~/.local/bin
+
 # clang-format
 cp .clang-format ${HOME}
 
