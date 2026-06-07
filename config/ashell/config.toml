@@ -1,7 +1,18 @@
+enable_esc_key = true
+log_level = "ashell::services::tray=debug"
+
+[osd]
+enabled = true
+show_volume_percentage = true
+show_brightness_percentage = true
+
+[animations]
+enabled = true
+
 [modules]
 left = [ "Workspaces", "MediaPlayer" ]
-center = [ "WindowTitle" ]
-right = [ [ "Tray", "AudioDevices" ], [ "KeyboardLayout", "Tempo" ], "Settings" ]
+center = [ "WindowTitle",  "Notifications" ]
+right = [ [ "Tray", "AudioDevices" ], [ "KeyboardLayout", "Tempo" ], [ "Privacy", "Settings" ] ]
 
 [tempo]
 clock_format = "%d %b %R"
@@ -11,6 +22,7 @@ clock_format = "%d %b %R"
 "Russian" = "ru"
 
 [settings]
+audio_indicator_format = "IconAndPercentage"
 audio_sinks_more_cmd = "pavucontrol -t 3"
 audio_sources_more_cmd = "pavucontrol -t 4"
 remove_airplane_btn = true
@@ -68,4 +80,8 @@ strong = "#494d64"
 [appearance.secondary_color]
 base = "#181926"
 strong = "#1e2030"
+
+[tray]
+blocklist = ["CopyQ",]
+right_click = "menu"
 
