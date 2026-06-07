@@ -6,7 +6,7 @@ There is config for GNOME/hyprland that I use with **Alt Linux Sisyphus** (Alt G
 
 For `screenshot-ocr`:
 
-- `inotifywait`
+- `slurp`
+- `grim`
 - `tesseract`, `tesseract-langpack-en`, `tesseract-langpack-ru`
 - `wl-clipboard`
-- `notify-send`

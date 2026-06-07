@@ -1,20 +1,21 @@
 #!/bin/bash
-WATCH_DIR=~/Pictures/Снимки\ экрана/
 
+# Only for GNOME with native screenshot picker
+
+# WATCH_DIR=~/Pictures/Снимки\ экрана/
 # Take a screenshot
-gdbus call --session \
-    --dest org.freedesktop.portal.Desktop \
-    --object-path /org/freedesktop/portal/desktop \
-    --method org.freedesktop.portal.Screenshot.Screenshot \
-    "" '{"interactive": <true>}' >/dev/null 2>&1
-
+# gdbus call --session \
+#     --dest org.freedesktop.portal.Desktop \
+#     --object-path /org/freedesktop/portal/desktop \
+#     --method org.freedesktop.portal.Screenshot.Screenshot \
+#     "" '{"interactive": <true>}' >/dev/null 2>&1
 # Wait for creation of new file
-IMAGE_PATH=$(inotifywait -t 30 -q -e create --format "%w%f" "$WATCH_DIR")
+# IMAGE_PATH=$(inotifywait -t 30 -q -e create --format "%w%f" "$WATCH_DIR")
 
 # Do OCR on created screenshot
 LANG=eng+rus
 export LC_ALL=en_US.UTF-8 # tesseract won't work if LC_ALL is unset so we set it here
-TEXT=$(tesseract -l $LANG "$IMAGE_PATH" stdout)
+TEXT=$(grim -g "$(slurp -c \#00000000 -b \#aaaaaa88 -d)" - | tesseract stdin stdout -l $LANG)
 
 # Copy text to clipboard
 echo "$TEXT" | wl-copy
@@ -22,4 +23,4 @@ echo "$TEXT" | wl-copy
 # Notify user
 notify-send "Text Extracted" "$TEXT"
 
-rm "$IMAGE_PATH"
+# rm "$IMAGE_PATH"
