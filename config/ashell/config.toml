@@ -1,0 +1,71 @@
+[modules]
+left = [ "Workspaces", "MediaPlayer" ]
+center = [ "WindowTitle" ]
+right = [ [ "Tray", "AudioDevices" ], [ "KeyboardLayout", "Tempo" ], "Settings" ]
+
+[tempo]
+clock_format = "%d %b %R"
+
+[keyboard_layout.labels]
+"English (US)" = "en"
+"Russian" = "ru"
+
+[settings]
+audio_sinks_more_cmd = "pavucontrol -t 3"
+audio_sources_more_cmd = "pavucontrol -t 4"
+remove_airplane_btn = true
+bluetooth_more_cmd = "blueman-manager"
+remove_idle_btn = true
+peripheral_indicators = "All"
+indicators = ["PowerProfile", "Audio", "Microphone", "Bluetooth", "Network", "Vpn", "Battery"]
+
+[media_player]
+max_title_length = 75
+
+[system_info]
+indicators = [ "Cpu", "Memory", "Temperature" , { "Disk" = "/", "Name" = "" }]
+
+[system_info.cpu]
+warn_threshold = 60
+alert_threshold = 80
+
+[system_info.memory]
+warn_threshold = 70
+alert_threshold = 85
+
+[system_info.disk]
+warn_threshold = 80
+alert_threshold = 90
+
+[system_info.temperature]
+warn_threshold = 60
+alert_threshold = 80
+
+[window_title]
+mode = "Title"
+truncate_title_after_length = 75
+
+[appearance]
+opacity = 0.75
+success_color = "#a6da95"
+text_color = "#cad3f5"
+
+workspace_colors = [ "#8aadf4", "#f5a97f","#c6a0f6" ]
+
+[appearance.primary_color]
+base = "#8aadf4"
+text = "#24273a"
+
+[appearance.danger_color]
+base = "#ed8796"
+weak = "#eed49f"
+
+[appearance.background_color]
+base = "#24273a"
+weak = "#363a4f"
+strong = "#494d64"
+
+[appearance.secondary_color]
+base = "#181926"
+strong = "#1e2030"
+

@@ -114,7 +114,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias zed=zed-editor
 alias ls=lsd
-alias proxy-on='export all_proxy=socks5://127.0.0.1:1080'
+alias proxy-on='export all_proxy=socks5://127.0.0.1:10808'
 alias proxy-off='unset all_proxy http_proxy https_proxy'
 
 export XDG_DATA_DIRS=/var/lib/flatpak/exports/share:/home/mleontyev/.local/share/flatpak/exports/share:$XDG_DATA_DIRS
