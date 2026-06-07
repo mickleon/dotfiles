@@ -61,8 +61,10 @@ truncate_title_after_length = 75
 opacity = 0.75
 success_color = "#a6da95"
 text_color = "#cad3f5"
-
 workspace_colors = [ "#8aadf4", "#f5a97f","#c6a0f6" ]
+
+[appearance.menu]
+opacity = 0.9
 
 [appearance.primary_color]
 base = "#8aadf4"
@@ -82,6 +84,6 @@ base = "#181926"
 strong = "#1e2030"
 
 [tray]
-blocklist = ["CopyQ",]
+blocklist = [":1.11",]
 right_click = "menu"
 
