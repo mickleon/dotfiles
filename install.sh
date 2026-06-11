@@ -2,6 +2,7 @@
 
 sudo apt-get update
 sudo apt-get install lsd
+echo "==== Copiyng config files ===="
 cp -r home ${HOME}
 dconf load -f / <settings.dconf
 
@@ -36,11 +37,12 @@ cat ${HOME}/.ssh/id_ed25519.pub
 
 # for nvim >= 0.12 install lua5.1-lpeg from luarocks
 
-# for wifi connecting through ashell add this to /etc/polkit-1/rules.d/10-network-manager.rules
-# polkit.addRule(function(action, subject) {
-#     if (action.id == "org.freedesktop.NetworkManager.settings.modify.system" &&
-#         subject.isInGroup("wheel")) {
-#         return polkit.Result.YES;
-#     }
-# });
+echo "Needs to edit /etc/polkit-1/rules.d/10-network-manager.rules for wifi connecting through ashell"
+echo root password needs:
+su -c "echo \"polkit.addRule(function(action, subject) {
+    if (action.id == "org.freedesktop.NetworkManager.settings.modify.system" &&
+        subject.isInGroup("wheel")) {
+        return polkit.Result.YES;
+    }
+});\" >> /etc/polkit-1/rules.d/10-network-manager.rules"
 sudo usermod -aG wheel $USER
