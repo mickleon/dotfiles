@@ -2,16 +2,15 @@
     "modules-left": [
         "hyprland/workspaces",
         "mpris",
-        "mpd"
-        // "cpu",
-        // "memory",
-        // "disk"
+        "mpd",
+        "group/hardware"
     ],
     "modules-center": [
         "hyprland/window"
     ],
     "modules-right": [
         "tray",
+        "group/langtime",
         "group/system"
     ]
 }

@@ -18,21 +18,18 @@
             "10": "10"
         },
         "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": []
+            "1": []
         }
     },
     "hyprland/window": {
         "format": "<span  weight='bold' >{class}</span>",
+        "tooltip-format": "",
         "max-length": 75,
         "icon": true,
         "icon-size": 14
     },
     "hyprland/language": {
-        "format": "{short}",
+        "format": "{shortDescription}",
         "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
-        // "format-en": "AMERICA, HELL YEAH!",
-        // "format-tr": "As bayrakları"
     }
 }
