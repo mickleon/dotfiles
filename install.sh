@@ -44,3 +44,12 @@ echo "==== Add your SSH key to GitHub: ===="
 cat ${HOME}/.ssh/id_ed25519.pub
 
 # for nvim >= 0.12 install lua5.1-lpeg from luarocks
+
+# for wifi connecting through ashell add this to /etc/polkit-1/rules.d/10-network-manager.rules
+# polkit.addRule(function(action, subject) {
+#     if (action.id == "org.freedesktop.NetworkManager.settings.modify.system" &&
+#         subject.isInGroup("wheel")) {
+#         return polkit.Result.YES;
+#     }
+# });
+sudo usermod -aG wheel $USER
