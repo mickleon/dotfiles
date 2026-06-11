@@ -12,6 +12,7 @@ hl.monitor({
 })
 
 hl.on("hyprland.start", function()
+	hl.exec_cmd("~/.config/hypr/portals.sh")
 	hl.exec_cmd("hyprpaper")
 	hl.exec_cmd("PATH=$PATH:/usr/sbin ashell")
 	hl.exec_cmd("copyq --start-server")

@@ -1,0 +1,17 @@
+{
+    "modules-left": [
+        "hyprland/workspaces",
+        "mpris",
+        "mpd"
+        // "cpu",
+        // "memory",
+        // "disk"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "tray",
+        "group/system"
+    ]
+}
