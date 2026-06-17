@@ -24,6 +24,6 @@ TEXT=$(grim -g "$GEOMETRY" - | tesseract stdin stdout -l $LANG) || exit $?
 echo "$TEXT" | wl-copy
 
 # Notify user
-notify-send "Text Extracted" "$TEXT"
+notify-send -a "Screenshot OCR" "Text Extracted" "$TEXT"
 
 # rm "$IMAGE_PATH"
