@@ -87,10 +87,6 @@ hl.bind(
 hl.bind(mainMod .. " + ALT + up", hl.dsp.window.swap({ direction = "u" }), { description = "Swap tiled window up" })
 hl.bind(mainMod .. " + ALT + down", hl.dsp.window.swap({ direction = "d" }), { description = "Swap tiled window down" })
 
--- TODO: rewrite to lua
--- binde = ALT,Tab,cyclenext                 # Cycle between windows
--- binde = ALT,Tab,bringactivetotop
-
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind(
 	"XF86AudioRaiseVolume",
