@@ -12,3 +12,10 @@ For `screenshot-ocr`:
 - `grim`
 - `tesseract`, `tesseract-langpack-en`, `tesseract-langpack-ru`
 - `wl-clipboard`
+
+For `ashell`:
+
+- `pavucontrol`
+- `blueman-manager`
+- `nm-connection-editor`
+- `gpu-screen-recorder`
