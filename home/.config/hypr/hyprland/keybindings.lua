@@ -6,10 +6,10 @@ local menu = "wofi"
 
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
-hl.bind(
-	mainMod .. " + SHIFT + " .. " + M",
-	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
-)
+-- hl.bind(
+-- 	mainMod .. " + SHIFT + " .. " + M",
+-- 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
+-- )
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("hyprpicker --autocopy --notify"))
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("copyq menu"))
 hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m window -z"))
