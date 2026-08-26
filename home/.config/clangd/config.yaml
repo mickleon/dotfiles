@@ -4,21 +4,21 @@ CompileFlags:
       -Wall,
       -Wextra,
       -Wpedantic,
-      -I/usr/include/c++/14,
-      -I/usr/include/c++/14/x86_64-alt-linux,
-      -I/usr/include/c++/14/backward,
-      -I/usr/lib64/gcc/x86_64-alt-linux/14/include,
-      -I/usr/local/include,
-      -I/usr/include,
+      -isystem/usr/include/c++/14,
+      -isystem/usr/include/c++/14/x86_64-alt-linux,
+      -isystem/usr/include/c++/14/backward,
+      -isystem/usr/lib64/gcc/x86_64-alt-linux/14/include,
+      -isystem/usr/local/include,
+      -isystem/usr/include,
     ]
 ---
 If:
   PathExclude: [.*\.c]
 CompileFlags:
-  Add: [-std=c++20, -fexceptions]
+  Add: [-std=c++23]
 
 ---
 If:
   PathMatch: .*\.c$
 CompileFlags:
-  Add: [-std=c11]
+  Add: [-std=c23]
