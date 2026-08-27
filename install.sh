@@ -46,3 +46,6 @@ su -c "echo \"polkit.addRule(function(action, subject) {
     }
 });\" >> /etc/polkit-1/rules.d/10-network-manager.rules"
 sudo usermod -aG wheel $USER
+
+# nopasswd
+su -c "echo \"$USER ALL=(root) NOPASSWD:/usr/bin/awg-quick up awg0, NOPASSWD:/usr/bin/awg-quick down awg0\" > /etc/sudoers.d/awg"

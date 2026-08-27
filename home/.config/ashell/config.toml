@@ -29,6 +29,7 @@ hibernate_cmd = "systemctl hibernate"
 bluetooth_more_cmd = "blueman-manager"
 wifi_more_cmd = "nm-connection-editor"
 remove_idle_btn = true
+vpn_more_cmd = "nm-connection-editor"
 peripheral_indicators = "All"
 indicators = ["PowerProfile", "Audio", "Microphone", "Bluetooth", "Network", "Vpn", "Battery"]
 
@@ -37,6 +38,12 @@ name = "Sreen recorder"
 icon = "󰕧 "
 status_command = "pgrep -f gpu-screen-recorder"
 command = "~/.config/ashell/screen-recorder-toggle.sh"
+
+[[settings.CustomButton]]
+name = "AmneziaWG"
+icon = "󰌾 "
+status_command = "pgrep -f amneziawg"
+command = "~/.config/ashell/awg-quick-toggle.sh"
 
 [media_player]
 max_title_length = 75
