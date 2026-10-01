@@ -47,3 +47,8 @@ hl.window_rule({
 	pin = true,
 	persistent_size = true,
 })
+hl.window_rule({
+	name = "zenity",
+	match = { class = "^zenity$" },
+	float = true,
+})
