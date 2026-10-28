@@ -86,6 +86,9 @@ workspace_colors = [ "#8aadf4", "#f5a97f","#c6a0f6" ]
 default = 0.8
 menu = 0.9
 
+[appearance.bar]
+margin = [5.0, 5.0, 0.0, 5.0]
+
 [appearance.primary_color]
 base = "#8aadf4"
 text = "#24273a"
