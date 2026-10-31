@@ -18,6 +18,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("copyq --start-server")
 	hl.exec_cmd("/usr/libexec/polkit-1/polkit-gnome-authentication-agent-1")
 	hl.exec_cmd("/usr/libexec/evolution-data-server/evolution-alarm-notify --autostart")
+	hl.exec_cmd("/opt/v2rayN-linux-64/v2rayN")
 end)
 
 -----------------------
