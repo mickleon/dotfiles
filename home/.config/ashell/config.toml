@@ -3,7 +3,7 @@ enable_esc_key = true
 [modules]
 left = [ "Workspaces", "Updates", "MediaPlayer" ]
 center = [ "WindowTitle", "Notifications" ]
-right = [ [ "Tray", "AudioDevices" ], [ "KeyboardLayout", "Tempo" ], [ "Privacy", "Settings" ] ]
+right = [ "Tunnels", [ "Tray", "AudioDevices" ], [ "KeyboardLayout", "Tempo" ], [ "Privacy", "Settings" ] ]
 
 [osd]
 enabled = true
@@ -77,6 +77,13 @@ truncate_title_after_length = 75
 [notifications]
 grouped = true
 
+[[CustomModule]]
+name = "Tunnels"
+type = "Button"
+icon = "󰛴"
+icons.'^up$' = "󰛶"
+listen_cmd = "~/.config/ashell/net-links.sh"
+
 [tray]
 right_click = "Menu"
 
@@ -102,12 +109,12 @@ indicators = ["PowerProfile", "Audio", "Microphone", "Bluetooth", "Network", "Vp
 
 [[settings.CustomButton]]
 name = "Sreen recorder"
-icon = ""
+icon = " "
 status_command = "pgrep -f gpu-screen-recorder"
 command = "~/.config/ashell/screen-recorder-toggle.sh"
 
 [[settings.CustomButton]]
 name = "AmneziaWG"
 icon = "󰌾"
-status_command = "pgrep -f amneziawg"
+status_command = "test -d /sys/class/net/awg0"
 command = "~/.config/ashell/awg-quick-toggle.sh"
