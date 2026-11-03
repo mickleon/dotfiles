@@ -3,7 +3,7 @@ enable_esc_key = true
 [modules]
 left = [ "Workspaces", "Updates", "MediaPlayer" ]
 center = [ "WindowTitle", "Notifications" ]
-right = [ "Tunnels", [ "Tray", "AudioDevices" ], [ "KeyboardLayout", "Tempo" ], [ "Privacy", "Settings" ] ]
+right = [ [ "Tray", "AudioDevices" ], [ "KeyboardLayout", "Tempo" ], [ "Tunnels", "Privacy", "Settings" ] ]
 
 [osd]
 enabled = true
@@ -42,8 +42,8 @@ strong = "#494d64"
 # Modules
 
 [updates]
-check_cmd = "~/.config/ashell/check-updates.sh"
-update_cmd = "kitty ~/.config/ashell/update.sh"
+check_cmd = "~/.config/ashell/scripts/check-updates.sh"
+update_cmd = "kitty ~/.config/scripts/ashell/update.sh"
 interval = 36000
 
 [system_info]
@@ -80,9 +80,9 @@ grouped = true
 [[CustomModule]]
 name = "Tunnels"
 type = "Button"
-icon = "󰛴"
+icon = "󰛶"
 icons.'^up$' = "󰛶"
-listen_cmd = "~/.config/ashell/net-links.sh"
+listen_cmd = "~/.config/ashell/scripts/net-links.sh"
 
 [tray]
 right_click = "Menu"
@@ -111,10 +111,10 @@ indicators = ["PowerProfile", "Audio", "Microphone", "Bluetooth", "Network", "Vp
 name = "Sreen recorder"
 icon = " "
 status_command = "pgrep -f gpu-screen-recorder"
-command = "~/.config/ashell/screen-recorder-toggle.sh"
+command = "~/.config/ashell/scripts/screen-recorder-toggle.sh"
 
 [[settings.CustomButton]]
 name = "AmneziaWG"
 icon = "󰌾"
 status_command = "test -d /sys/class/net/awg0"
-command = "~/.config/ashell/awg-quick-toggle.sh"
+command = "~/.config/ashell/scripts/awg-quick-toggle.sh"
