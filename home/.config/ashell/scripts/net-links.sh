@@ -2,7 +2,11 @@
 
 filter='
     [.[] | select(.flags | index("POINTOPOINT")) | .ifname]
-    | {text: join("  "), alt: (if length > 0 then "up" else "down" end)}
+    | {
+        text: join("  "),
+        alt: (if length > 0 then "up" else "down" end),
+        tooltip: "Active tunnels"
+      }
 '
 
 last=

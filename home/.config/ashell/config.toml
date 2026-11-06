@@ -86,7 +86,7 @@ name = "Tunnels"
 type = "Button"
 icon = "󰛶"
 icons.'^up$' = "󰛶"
-listen_cmd = "~/.config/ashell/scripts/net-links.sh"
+listen_cmd = "~/.config/ashell/scripts/tunnels.sh"
 
 [tray]
 right_click = "Menu"
