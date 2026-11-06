@@ -1,5 +1,9 @@
 enable_esc_key = true
 
+[logging]
+level = "debug"
+target = "stdout"
+
 [modules]
 left = [ "Workspaces", "Updates", "MediaPlayer" ]
 center = [ "WindowTitle", "Notifications" ]
@@ -43,7 +47,7 @@ strong = "#494d64"
 
 [updates]
 check_cmd = "~/.config/ashell/scripts/check-updates.sh"
-update_cmd = "kitty ~/.config/scripts/ashell/update.sh"
+update_cmd = "kitty ~/.config/ashell/scripts/update.sh"
 interval = 36000
 
 [system_info]

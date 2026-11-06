@@ -6,5 +6,5 @@ flatpak update
 
 echo
 echo "Проверка оставшихся обновлений..."
-~/.config/ashell/check-updates.sh --prefetch
+~/.config/ashell/scripts/check-updates.sh --prefetch
 left=$(wc -l <"${XDG_CACHE_HOME:-$HOME/.cache}/ashell-apt/result")
