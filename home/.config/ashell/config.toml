@@ -7,7 +7,7 @@ target = "stdout"
 [modules]
 left = [ "Workspaces", "Updates", "MediaPlayer" ]
 center = [ "WindowTitle", "Notifications" ]
-right = [ [ "Tray", "AudioDevices" ], [ "KeyboardLayout", "Tempo" ], [ "Tunnels", "Privacy", "Settings" ] ]
+right = [ [ "Tray", "AudioDevices" ], [ "NumLock", "KeyboardLayout", "Tempo" ], [ "Tunnels", "Privacy", "Settings" ] ]
 
 [osd]
 enabled = true
@@ -87,6 +87,11 @@ type = "Button"
 icon = "󰛶"
 icons.'^up$' = "󰛶"
 listen_cmd = "~/.config/ashell/scripts/tunnels.sh"
+
+[[CustomModule]]
+name = "NumLock"
+type = "Text"
+listen_cmd = "~/.config/ashell/scripts/numlock.sh"
 
 [tray]
 right_click = "Menu"
