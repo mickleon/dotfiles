@@ -13,9 +13,9 @@ while :; do
 
     if [[ -n $state && $state != "$last" ]]; then
         if [[ $state == "on" ]]; then
-            text="NL"
-        else
             text=""
+        else
+            text="⦁"
         fi
         printf '{"text":"%s","alt":"%s","tooltip":"NumLock %s"}\n' "$text" "$state" "$state"
         last=$state

@@ -7,7 +7,7 @@ target = "stdout"
 [modules]
 left = [ "Workspaces", "Updates", "MediaPlayer" ]
 center = [ "WindowTitle", "Notifications" ]
-right = [ [ "Tray", "AudioDevices" ], [ "NumLock", "KeyboardLayout", "Tempo" ], [ "Tunnels", "Privacy", "Settings" ] ]
+right = [ [ "Tray", "AudioDevices" ], [ "KeyboardLayout", "Tempo" ], [ "Tunnels", "Privacy", "Settings" ] ]
 
 [osd]
 enabled = true
@@ -81,18 +81,6 @@ truncate_title_after_length = 75
 [notifications]
 grouped = true
 
-[[CustomModule]]
-name = "Tunnels"
-type = "Button"
-icon = "󰛶"
-icons.'^up$' = "󰛶"
-listen_cmd = "~/.config/ashell/scripts/tunnels.sh"
-
-[[CustomModule]]
-name = "NumLock"
-type = "Text"
-listen_cmd = "~/.config/ashell/scripts/numlock.sh"
-
 [tray]
 right_click = "Menu"
 
@@ -100,8 +88,20 @@ right_click = "Menu"
 "English (US)" = "en"
 "Russian" = "ru"
 
+[[CustomModule]]
+name = "NumLock"
+type = "Text"
+listen_cmd = "~/.config/ashell/scripts/numlock.sh"
+
 [tempo]
 clock_format = "%d %b %R"
+
+[[CustomModule]]
+name = "Tunnels"
+type = "Button"
+icon = "󰛶"
+icons.'^up$' = "󰛶"
+listen_cmd = "~/.config/ashell/scripts/tunnels.sh"
 
 [settings]
 audio_indicator_format = "IconAndPercentage"
