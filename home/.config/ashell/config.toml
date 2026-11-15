@@ -24,8 +24,8 @@ text_color = "#cad3f5"
 workspace_colors = [ "#8aadf4", "#f5a97f","#c6a0f6" ]
 
 [appearance.opacity]
-default = 0.8
-menu = 0.8
+default = 0.75
+menu = 0.75
 
 [appearance.bar]
 margin = [5.0, 5.0, 0.0, 5.0]
