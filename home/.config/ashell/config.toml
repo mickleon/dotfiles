@@ -114,7 +114,7 @@ wifi_more_cmd = "nm-connection-editor"
 remove_idle_btn = true
 vpn_more_cmd = "nm-connection-editor"
 peripheral_indicators = "All"
-indicators = ["PowerProfile", "Audio", "Microphone", "Bluetooth", "Network", "Vpn", "PeripheralBattery", "Battery"]
+indicators = [ "Vpn", "PowerProfile", "Audio", "Microphone", "Bluetooth", "Network", "PeripheralBattery", "Battery"]
 
 [[settings.CustomButton]]
 name = "Sreen recorder"
