@@ -3,6 +3,7 @@ require("hyprland.look")
 require("hyprland.input")
 require("hyprland.keybindings")
 require("hyprland.windows")
+require("hyprland.monitors")
 
 hl.monitor({
 	output = "",
