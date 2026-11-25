@@ -16,6 +16,7 @@ hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m window -z"))
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output -m eDP-1 -z"))
 hl.bind(mainMod .. " + SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region -z"))
 hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd("~/.local/bin/screenshot-ocr"))
+hl.bind(mainMod .. " + SHIFT + l", hl.dsp.exec_cmd("hyprlock"))
 
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
